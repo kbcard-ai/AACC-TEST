@@ -252,8 +252,8 @@ prevBtn.addEventListener('click', ()=> { if(current>0) renderQuestion(current-1)
 function computeTotal(){ return scores.reduce((a,b)=> a + (parseFloat(b)||0), 0); }
 function classify(total){
   if(total >= 70) return "산출물 트랙(교육 불필요)";
-  if(total >= 40) return "교육 트랙(수강 필수)";
-  return "기초 안내 대상";
+  if(total >= 40) return "교육 트랙(수강 권고)";
+  return "교육 트랙(수강 권고)";
 }
 function finalize(){
   surveyEl.style.display = 'none';
